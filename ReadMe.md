@@ -6,6 +6,7 @@ You can free to borrow from this template for your own personal use. Please do n
 
 ## Included
 
+
 * SEO tags
 * All paper sections (Abstract,Introduction,Methodology, Results, Conclusion,BibTeX,Acknowledgement)
 * Authers details
