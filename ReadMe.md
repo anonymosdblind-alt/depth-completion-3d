@@ -6,24 +6,19 @@ This repository provides supplementary materials and code samples for the paper 
 
 Abstract: (Paste the abstract from your paper here.)
 
-📋 Table of Contents
-🌟 Overview
+## 📋 Table of Contents
+- [🌟 Overview](#-overview)
+- [🏆 Key Features & Contributions](#-key-features--contributions)
+- [📊 Quantitative Results](#-quantitative-results)
+- [🎨 Qualitative Results](#-qualitative-results)
+- [⚙️ Implementation Highlights](#️-implementation-highlights)
 
-🏆 Key Features & Contributions
 
-📊 Quantitative Results
+---
 
-🎨 Qualitative Results
 
-⚙️ Implementation Highlights
+## 🌟 Overview
 
-📁 Repository Structure
-
-📝 Citation
-
-📄 License
-
-🌟 Overview
 This work addresses the challenges of [mention core problems: efficiency, LiDAR reliance, LDL] in depth completion. We propose:
 
 A lightweight multi-scale architecture for fast, state-of-the-art depth completion.
@@ -34,7 +29,7 @@ A novel Object-Guided Sparse Depth Evaluation Protocol for rigorous robustness b
 
 (Include your main pipeline figure here, if possible.)
 
-🏆 Key Features & Contributions
+## 🏆 Key Features & Contributions
 Fast & Accurate Depth Completion: Our standalone depth completion network achieves SOTA efficiency on KITTI and NYUv2.
 
 Monocular Depth Completion: A novel self-distillation framework eliminates the need for LiDAR hints at inference.
@@ -43,7 +38,7 @@ Object-Guided Evaluation Protocol: We propose and release a new benchmark to eva
 
 Public Data: We release precomputed sparse depth hints for the KITTI validation set under our Object-Guided protocol.
 
-📊 Quantitative Results
+## 📊 Quantitative Results
 Main Benchmark Performance
 *(Table: Your model vs. SOTA on KITTI Depth Completion and NYUv2, highlighting RMSE/MAE and FPS.)*
 
@@ -53,7 +48,7 @@ Object-Guided Sparse Depth Evaluation
 Ablation Studies
 (Key results: Impact of self-distillation, detection guidance, etc.)
 
-🎨 Qualitative Results
+## 🎨 Qualitative Results
 (A grid of visual comparisons is ideal here.)
 
 Figure 1: Depth completion results on KITTI (Ours vs. Baseline).
@@ -62,7 +57,7 @@ Figure 2: Visualization of Object-Guided sparse hints vs. uniform subsampling.
 
 Figure 3: Monocular inference results (using only detected objects as priors).
 
-⚙️ Implementation Highlights
+## ⚙️ Implementation Highlights
 Due to licensing and size constraints, we cannot release the full training code. However, this repository provides key implementation samples to illustrate the core components of our method.
 
 Provided Code Samples:

@@ -31,7 +31,7 @@ function copyBibTeX() {
 
       this.currentIndex = 0;
       this.slidesPerView = 1;
-      this.totalSlides = Math.ceil(this.slides.length / this.slidesPerView);
+      this.totalSlides = this.slides.length;
       this.interval = interval;
       this.autoPlayTimer = null;
 
@@ -101,9 +101,8 @@ function copyBibTeX() {
     }
 
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
-      this.updateCarousel();
-      this.resetAutoPlay();
+        this.currentIndex = (this.currentIndex + 1) % this.totalPages;
+        this.updateCarousel();
     }
 
     prevSlide() {
