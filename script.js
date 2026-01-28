@@ -103,6 +103,7 @@ function copyBibTeX() {
     nextSlide() {
         this.currentIndex = (this.currentIndex + 1) % this.totalPages;
         this.updateCarousel();
+        this.resetAutoPlay();
     }
 
     prevSlide() {
