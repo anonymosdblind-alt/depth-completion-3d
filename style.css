@@ -188,6 +188,7 @@ h2 {
 .bibtex-copy-button:hover {
   background-color: #3498db;
 }
+/* 
 .carousel-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -250,7 +251,104 @@ h2 {
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
+} */
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your preference */
+  margin: 0 auto;
+  overflow: hidden;
 }
+
+/* Track that holds all slides */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: auto;
+}
+
+/* Each slide - MODIFIED FOR SINGLE IMAGE */
+.carousel-slide {
+  flex: 0 0 100%; /* Each slide takes full width */
+  width: 100%;
+  margin: 0;
+  height: auto;
+  min-height: 400px; /* Adjust based on your images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Images inside slides - MODIFIED */
+.carousel-slide img {
+  width: auto;
+  max-width: 100%;
+  max-height: 500px; /* Adjust based on your needs */
+  height: auto;
+  object-fit: contain; /* Show full image without cropping */
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Navigation buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
+}
+
+/* Optional: Add indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.carousel-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+  background: #007bff;
+}
+
+
+
 
 .indicator {
   width: 12px;
