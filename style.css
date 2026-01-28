@@ -218,15 +218,12 @@ h2 {
 } */
 
 
-
 .carousel-container {
-  position: relative;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
   overflow: hidden;
-  background: #f8f9fa;
-  border-radius: 8px;
+  margin-bottom: 40px;
 }
 
 .carousel-track {
@@ -234,66 +231,63 @@ h2 {
   transition: transform 0.5s ease-in-out;
 }
 
-/* CHANGE THIS: Show one image at a time (full width) */
+/* CHANGED: Show one image at a time (100% width) */
 .carousel-slide {
-  flex: 0 0 100%; /* Changed from 33.333% to 100% */
+  flex: 0 0 100%; /* Changed from calc(33.333% - 20px) to 100% */
   width: 100%;
-  height: auto; /* Changed from fixed 300px to auto */
+  height: 500px; /* Adjust height as needed */
+  margin: 0; /* Removed margin since we have only one slide visible */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
 }
 
-.carousel-slide img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 600px; /* Adjust based on your preference */
-  object-fit: contain;
+/* CHANGED: Maintain aspect ratio, don't force cover */
+.carousel-slide img,
+.carousel-slide iframe {
+  width: auto; /* Changed from 100% to auto */
+  max-width: 100%; /* Don't exceed container width */
+  height: auto; /* Changed from 100% to auto */
+  max-height: 100%; /* Don't exceed container height */
+  object-fit: contain; /* Changed from cover to contain */
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: none;
 }
 
-/* Navigation buttons */
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
 .carousel-button:hover {
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 1);
 }
 
 .carousel-button.prev {
-  left: 20px;
+  left: 10px;
 }
 
 .carousel-button.next {
-  right: 20px;
+  right: 10px;
 }
 
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-top: 20px;
-  padding: 10px;
 }
 
 .indicator {
@@ -301,12 +295,13 @@ h2 {
   height: 12px;
   border-radius: 50%;
   background: #ccc;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  padding: 0;
 }
 
 .indicator.active {
-  background: #007bff;
+  background: #3b82f6;
 }
 
 
