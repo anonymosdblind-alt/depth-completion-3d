@@ -189,8 +189,24 @@ h2 {
   background-color: #3498db;
 }
 
+/* Carousel Container */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide = 100% width (ONE at a time) */
 .carousel-slide {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -198,21 +214,23 @@ h2 {
   padding: 20px;
   box-sizing: border-box;
 }
+
+/* Image styling */
 .carousel-slide img {
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 500px; 
+  max-height: 500px;
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-
-
+/* Caption */
 .caption-text {
   text-align: center;
+  max-width: 800px;
   padding: 0 20px;
 }
 
@@ -229,20 +247,7 @@ h2 {
   line-height: 1.5;
 }
 
-/* Adjust carousel height for caption */
-.carousel-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
+/* Navigation */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -264,14 +269,10 @@ h2 {
   background: rgba(255, 255, 255, 1);
 }
 
-.carousel-button.prev {
-  left: 10px;
-}
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
 
-.carousel-button.next {
-  right: 10px;
-}
-
+/* Indicators */
 .carousel-indicators {
   display: flex;
   justify-content: center;
