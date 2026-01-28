@@ -1,69 +1,77 @@
 # Fast Depth Completion: 3D Object Detection as a Guidance for Monocular Depth Completion.
 
+
 > Demo Page - https://anonymosdblind-alt.github.io/depth-completion-3d/
+This repository provides supplementary materials and code samples for the paper "AAA".
 
-You can free to borrow from this template for your own personal use. Please do not remove below code of the template mentioned to about this template.
+Abstract: (Paste the abstract from your paper here.)
 
-## Included
+📋 Table of Contents
+🌟 Overview
 
+🏆 Key Features & Contributions
 
-* SEO tags
-* All paper sections (Abstract,Introduction,Methodology, Results, Conclusion,BibTeX,Acknowledgement)
-* Authers details
-* BibTex Copy to Clipboard button - Reader can easily copy it
-* Pre-built codes
-  * Image Gallery - Auto Slideshow
-  * Video Gallery - Auto Slideshow
-  * Demo Video
-  * Demo Videos List
-* Dark Mode
-* Menu Bar
-* Scroll Up Button
+📊 Quantitative Results
 
-## Simple Steps
+🎨 Qualitative Results
 
-Step 1: Fork this repo or download this repo
+⚙️ Implementation Highlights
 
-Step 2: Edit index.html file (Comments included)
+📁 Repository Structure
 
-Step 3: Create your own repo for your research in your GitHub account and upload files
+📝 Citation
 
-Step 4: Creare a page for that (Repo Setting --> Pages --> Select Brach and Save then GitHub Action will run and give Page URL for your page)
+📄 License
 
-## index.html File Edit Help
+🌟 Overview
+This work addresses the challenges of [mention core problems: efficiency, LiDAR reliance, LDL] in depth completion. We propose:
 
-If you know web development, you can edit the index.html file and also script.js and style.css files.
+A lightweight multi-scale architecture for fast, state-of-the-art depth completion.
 
-This has main step and step 1 to 10. index.html file also has comments for each step. If you have any query, please contact me.
+A detection-guided self-distillation method to overcome LiDAR Distribution Leakage (LDL) and enable monocular inference.
 
-**Steps:**
+A novel Object-Guided Sparse Depth Evaluation Protocol for rigorous robustness benchmarking.
 
-Main Step: Edit Page Title (Edit SEO tags if you can, it will help for Google Search)
+(Include your main pipeline figure here, if possible.)
 
-Step 1: Header Part (Authers and Other Details)
+🏆 Key Features & Contributions
+Fast & Accurate Depth Completion: Our standalone depth completion network achieves SOTA efficiency on KITTI and NYUv2.
 
-Step 2: Button for links
+Monocular Depth Completion: A novel self-distillation framework eliminates the need for LiDAR hints at inference.
 
-Step 3: Add your paper abstract
+Object-Guided Evaluation Protocol: We propose and release a new benchmark to evaluate true sparsity robustness, mitigating the LiDAR Distribution Leakage (LDL) confound.
 
-Step 4: Add your paper introduction
+Public Data: We release precomputed sparse depth hints for the KITTI validation set under our Object-Guided protocol.
 
-Step 5: Add your paper methodology
+📊 Quantitative Results
+Main Benchmark Performance
+*(Table: Your model vs. SOTA on KITTI Depth Completion and NYUv2, highlighting RMSE/MAE and FPS.)*
 
-Step 6: Add your paper results
+Object-Guided Sparse Depth Evaluation
+(Table: Performance comparison under the new protocol, showing how your method overcomes LDL.)
 
-Step 7: Add your paper conclusion
+Ablation Studies
+(Key results: Impact of self-distillation, detection guidance, etc.)
 
-Step 8: Add your paper bibtex
+🎨 Qualitative Results
+(A grid of visual comparisons is ideal here.)
 
-Step 9: Add your paper acknowledgements
+Figure 1: Depth completion results on KITTI (Ours vs. Baseline).
 
-Step 10: Edit page footer
+Figure 2: Visualization of Object-Guided sparse hints vs. uniform subsampling.
 
----
+Figure 3: Monocular inference results (using only detected objects as priors).
 
-Please send me feedback on [GitHub](https://github.com/indramal/iNdra-GitHub-Page-Template-For-Resarch/issues)
+⚙️ Implementation Highlights
+Due to licensing and size constraints, we cannot release the full training code. However, this repository provides key implementation samples to illustrate the core components of our method.
 
-> Made with ❤️ by [Indramal](https://github.com/indramal)
+Provided Code Samples:
+model/lightweight_backbone.py - Core architecture of our multi-scale encoder.
 
-![Visitor Count](https://profile-counter.glitch.me/indramalgithubpagetemplate/count.svg)
+model/depth_head.py - Implementation of the Sparsity Agnostic Pooling and NLSPN refinement module.
+
+model/detection_prior_sampler.py - Logic for sampling points from 3D bounding boxes for self-distillation.
+
+eval/object_guided_protocol.py - Script to generate Object-Guided sparse hints from ground truth annotations.
+
+configs/default.yaml - Example configuration file with key hyperparameters.
