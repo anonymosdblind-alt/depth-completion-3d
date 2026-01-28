@@ -1,6 +1,6 @@
-# iNdra Page Template: This is a Website / GitHub Page Template for Research Papers / Academic Papers [Free] [v1]
+# Fast Depth Completion: 3D Object Detection as a Guidance for Monocular Depth Completion.
 
-> Demo Page - https://indramal.github.io/iNdra-GitHub-Page-Template-For-Resarch/
+> Demo Page - https://anonymosdblind-alt.github.io/depth-completion-3d/
 
 You can free to borrow from this template for your own personal use. Please do not remove below code of the template mentioned to about this template.
 
