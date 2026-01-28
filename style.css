@@ -188,8 +188,8 @@ h2 {
 .bibtex-copy-button:hover {
   background-color: #3498db;
 }
-/* 
-.carousel-container {
+
+/* .carousel-container {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -215,6 +215,46 @@ h2 {
   object-fit: cover;
   border-radius: 8px;
   border: none;
+} */
+
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.carousel-slide {
+  flex: 0 0 100%; 
+  width: 100%;
+  height: auto; 
+  min-height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.carousel-slide img {
+  width: auto;
+  max-width: 100%;
+  height: auto; 
+  max-height: 80vh; 
+  object-fit: contain; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .carousel-button {
@@ -251,16 +291,16 @@ h2 {
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
-} */
+}
 
 
-.carousel-container {
+/* .carousel-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  background: #f8f9fa; /* Optional background */
+  background: #f8f9fa;
 }
 
 .carousel-track {
@@ -268,12 +308,12 @@ h2 {
   transition: transform 0.5s ease-in-out;
 }
 
-/* CRITICAL FIX: Remove fixed height, use auto */
+
 .carousel-slide {
-  flex: 0 0 100%; /* Each slide takes full width */
+  flex: 0 0 100%; 
   width: 100%;
-  height: auto; /* Let height adjust to content */
-  min-height: 300px; /* Optional minimum */
+  height: auto; 
+  min-height: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,17 +321,17 @@ h2 {
   box-sizing: border-box;
 }
 
-/* CRITICAL FIX: Let images control their own height */
+
 .carousel-slide img {
   width: auto;
-  max-width: 100%; /* Don't exceed container width */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 80vh; /* Optional: limit to viewport height */
-  object-fit: contain; /* Show entire image */
+  max-width: 100%;
+  height: auto; 
+  max-height: 80vh; 
+  object-fit: contain; 
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-/* Navigation buttons */
+
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -321,7 +361,7 @@ h2 {
   right: 20px;
 }
 
-/* Optional: Add indicators */
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -341,7 +381,7 @@ h2 {
 
 .carousel-indicators .indicator.active {
   background: #007bff;
-}
+} */
 
 
 
