@@ -257,25 +257,23 @@ h2 {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1200px; /* Adjust based on your preference */
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  background: #f8f9fa; /* Optional background */
 }
 
-/* Track that holds all slides */
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height: auto;
 }
 
-/* Each slide - MODIFIED FOR SINGLE IMAGE */
+/* CRITICAL FIX: Remove fixed height, use auto */
 .carousel-slide {
   flex: 0 0 100%; /* Each slide takes full width */
   width: 100%;
-  margin: 0;
-  height: auto;
-  min-height: 400px; /* Adjust based on your images */
+  height: auto; /* Let height adjust to content */
+  min-height: 300px; /* Optional minimum */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,18 +281,16 @@ h2 {
   box-sizing: border-box;
 }
 
-/* Images inside slides - MODIFIED */
+/* CRITICAL FIX: Let images control their own height */
 .carousel-slide img {
   width: auto;
-  max-width: 100%;
-  max-height: 500px; /* Adjust based on your needs */
-  height: auto;
-  object-fit: contain; /* Show full image without cropping */
-  object-position: center;
+  max-width: 100%; /* Don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80vh; /* Optional: limit to viewport height */
+  object-fit: contain; /* Show entire image */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 /* Navigation buttons */
 .carousel-button {
   position: absolute;
