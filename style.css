@@ -311,6 +311,24 @@ h2 {
   line-height: 1.5;
 }
 
+.caption-text {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.caption-text h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.caption-text p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /* Adjust carousel height for caption */
 .carousel-container {
   max-width: 1200px;
