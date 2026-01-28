@@ -233,10 +233,10 @@ h2 {
 
 /* CHANGED: Show one image at a time (100% width) */
 /* .carousel-slide {
-  flex: 0 0 100%; /* Changed from calc(33.333% - 20px) to 100% */
+  flex: 0 0 100%; 
   width: 100%;
-  height: 500px; /* Adjust height as needed */
-  margin: 0; /* Removed margin since we have only one slide visible */
+  height: 500px; 
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,7 +258,7 @@ h2 {
   flex: 0 0 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Stack image and caption vertically */
+  flex-direction: column; 
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
